@@ -4,7 +4,7 @@ import css from "../../styles/Common.module.css";
 
 const ContactFilter = ({filter}) => {
     return (
-    <>
+    <div className={css.form}>
       <h2>Contacts</h2>
       <label>Find contacts by name</label>
       <input 
@@ -14,7 +14,7 @@ const ContactFilter = ({filter}) => {
         name="filter"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         />
-    </>
+    </div>
 
     )
 }
