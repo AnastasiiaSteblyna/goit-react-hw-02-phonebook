@@ -1,23 +1,25 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import css from "../../styles/Common.module.css";
+import css from '../../styles/Common.module.css';
 
 const ContactList = ({ renderContacts, deleteContacts }) => {
-    return (
-      <ul className={css.list}>
+  return (
+    <ul className={css.list}>
       {renderContacts.map(({ id, name, number }) => (
         <li className={css.item} key={id}>
-        {name}: {number}
-        <button
+          {name}: {number}
+          <button
             className={css.btn}
             type="button"
             onClick={() => deleteContacts(id)}
-          >Delete</button>
+          >
+            Delete
+          </button>
         </li>
       ))}
     </ul>
-    )
-}
+  );
+};
 
 ContactList.prototype = {
   filter: PropTypes.arrayOf(
